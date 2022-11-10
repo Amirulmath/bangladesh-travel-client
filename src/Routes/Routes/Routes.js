@@ -36,7 +36,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/detail/:id',
                 element: <PrivateRoute><ServiceDetail></ServiceDetail></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/places/${params.id}`)
+                loader: ({params})=> fetch(`https://bangladesh-travel-server-amirulm08-gmailcom.vercel.app/places/${params.id}`)
             }
             
         ]
