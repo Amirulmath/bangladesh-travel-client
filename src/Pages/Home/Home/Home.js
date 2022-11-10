@@ -1,8 +1,10 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Banner from '../Banner/Banner';
+import Button from 'react-bootstrap/Button';
 import Services from '../Services/Services';
 import './Home.css';
+import PlaceList from './PlaceList/PlaceList';
 
 const Home = () => {
     const services = useLoaderData();
@@ -12,7 +14,12 @@ const Home = () => {
                 <Banner></Banner>
             </div>
             <div>
-                <Services></Services>
+                <PlaceList></PlaceList>
+            </div>
+            <div className='m-4 text-center'>
+                <Link to='/services'>
+                    <Button variant="success">See All</Button>
+                </Link>
             </div>
         </div>
     );
