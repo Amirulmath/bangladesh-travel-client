@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import ServiceCard from '../../Shared/ServiceCard/ServiceCard';
 import Banner from '../Banner/Banner';
+import Services from '../Services/Services';
 import './Home.css';
 
 const Home = () => {
@@ -11,13 +11,8 @@ const Home = () => {
             <div>
                 <Banner></Banner>
             </div>
-            <div className='card-list'>
-                {
-                    services.map(service =><ServiceCard
-                        key={service._id}
-                        service={service}
-                    ></ServiceCard>)
-                }
+            <div>
+                <Services></Services>
             </div>
         </div>
     );
