@@ -2,9 +2,10 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import Button from 'react-bootstrap/Button';
-import Services from '../Services/Services';
 import './Home.css';
 import PlaceList from './PlaceList/PlaceList';
+import Card from 'react-bootstrap/Card';
+import Transport from '../Transport/Transport';
 
 const Home = () => {
     const services = useLoaderData();
@@ -20,6 +21,9 @@ const Home = () => {
                 <Link to='/services'>
                     <Button variant="success">See All</Button>
                 </Link>
+            </div>
+            <div>
+                <Transport></Transport>
             </div>
         </div>
     );

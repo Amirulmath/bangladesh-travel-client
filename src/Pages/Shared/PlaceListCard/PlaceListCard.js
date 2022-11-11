@@ -7,9 +7,9 @@ const PlaceListCard = ({service}) => {
     const { _id, title, details, fee, date, image_url } = service;
 
     return (
-        <Card className=' text-center'>
+        <Card>
             <Card.Body>
-                <Card.Title>{title}</Card.Title>
+                <Card.Title className=' text-center'>{title}</Card.Title>
                 <Card.Img className="mb-2" variant="top" src={image_url} />
                 <Card.Text>
                     <p><b>Course Detail: </b>{details.length > 100 ? details.slice(0,100) + '...' : details}</p>
