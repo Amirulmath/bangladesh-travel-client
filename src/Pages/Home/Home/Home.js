@@ -4,8 +4,8 @@ import Banner from '../Banner/Banner';
 import Button from 'react-bootstrap/Button';
 import './Home.css';
 import PlaceList from './PlaceList/PlaceList';
-import Card from 'react-bootstrap/Card';
 import Transport from '../Transport/Transport';
+import Hotel from './Hotel/Hotel';
 
 const Home = () => {
     const services = useLoaderData();
@@ -22,8 +22,11 @@ const Home = () => {
                     <Button variant="success">See All</Button>
                 </Link>
             </div>
-            <div>
+            <div className='m-4'>
                 <Transport></Transport>
+            </div>
+            <div className='m-4'>
+                <Hotel></Hotel>
             </div>
         </div>
     );
