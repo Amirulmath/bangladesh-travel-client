@@ -4,10 +4,10 @@ import Card from 'react-bootstrap/Card';
 const BlogPage = () => {
     return (
         <div>
-            <div className='mt-4 text-center'>
+            <div className='m-4 text-center'>
                 <h1>Questions & Answers</h1>
             </div>
-            <div className='mt-4'>
+            <div className='m-4'>
                 <div>
                     <Card>
                         <Card.Body>

@@ -18,7 +18,7 @@ const PlaceListCard = ({service}) => {
                 </Card.Text>
             </Card.Body>
             <Card.Footer className="d-flex justify-content-between text-muted">            
-                <Link>
+                <Link to={`/review/${_id}`}>
                     <Button variant="primary">Review</Button>
                 </Link>
                 <Link to={`/detail/${_id}`}>

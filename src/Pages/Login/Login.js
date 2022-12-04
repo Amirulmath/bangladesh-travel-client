@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
     const [error, setError] = useState('');
@@ -49,6 +50,7 @@ const Login = () => {
                 </Form.Text>
             </Form>
             <p>New to Register: <Link to='/signup'>Singup</Link></p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
