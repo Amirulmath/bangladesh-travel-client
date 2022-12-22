@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const SignUp = () => {
     const {createUser} = useContext(AuthContext);
@@ -23,7 +25,7 @@ const SignUp = () => {
         .catch( e => console.error(e));
     }
     return (
-        <div>
+        <div className='shadow p-3 my-5 bg-light text-center rounded'>
             <Form onSubmit={handleSignUp}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Your Name</Form.Label>
@@ -51,6 +53,12 @@ const SignUp = () => {
 
                 </Form.Text>
             </Form>
+            <div>
+            <p>Already have an account <Link className='text-decoration-none' to="/login"><b>Please Login</b></Link></p>
+            </div>
+            <div>
+                <SocialLogin></SocialLogin>
+            </div>
         </div>
     );
 };

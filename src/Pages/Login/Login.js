@@ -30,7 +30,7 @@ const Login = () => {
         .catch(error => console.error(error))
     }
     return (
-        <div>
+        <div className='shadow p-3 my-5 bg-light text-center rounded'>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -49,8 +49,12 @@ const Login = () => {
                     
                 </Form.Text>
             </Form>
-            <p>New to Register: <Link to='/signup'>Singup</Link></p>
-            <SocialLogin></SocialLogin>
+            <div>
+            <p>Create new Account <Link className='text-decoration-none' to="/signup"><b>Singup</b></Link></p>
+            </div>
+            <div>
+                <SocialLogin></SocialLogin>
+            </div>
         </div>
     );
 };

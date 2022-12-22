@@ -46,7 +46,7 @@ const Review = () => {
     }
     return (
         <div>
-            <div className='m-4'>
+            <div className='shadow p-3 my-5 bg-light text-center rounded'>
                 <Form onSubmit={handlePlaceReview}>
                     <div>
                         <h2>{title}</h2>
