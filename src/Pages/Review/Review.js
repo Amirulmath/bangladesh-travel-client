@@ -2,12 +2,17 @@ import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Review = () => {
     const {_id, title, date, fee} = useLoaderData();
     const { user } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
+
     const handlePlaceReview = event =>{
         event.preventDefault();
         const form = event.target;
@@ -39,7 +44,7 @@ const Review = () => {
                 if(data.acknowledged){
                     alert('Review successfully')
                     form.reset();
-                    
+                    navigate(from, { replace: true });
                 }
             })
             .catch(er => console.error(er));

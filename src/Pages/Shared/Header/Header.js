@@ -36,7 +36,8 @@ const Header = () => {
                     {
                         user?.uid ?
                             <>
-                             <span className='me-4'>{user?.displayName}</span>
+                            <Link className='text-decoration-none' to='/myreviewes'>My Review</Link>
+                             <span className='mx-4'>{user?.displayName}</span>
                               <Button variant="light" onClick={handleLogOut}>Log out</Button>
                             </>
                              :

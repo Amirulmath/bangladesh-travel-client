@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import Table from 'react-bootstrap/Table';
-import ReviewRow from './ReviewRow';
+import MyReviewRow from './MyReviewRow';
 
-const ReviewPage = () => {
-    const [reviews, setReviews] = useState([]);
+const MyReviews = () => {
+    const { user } = useContext(AuthContext);
+    const [myReview, setMyReview] = useState([]);
 
     useEffect( () =>{
-        fetch('https://bangladesh-travel-server.vercel.app/reviews')
+        fetch(`https://bangladesh-travel-server.vercel.app/myreview?email=${user?.email}`)
         .then(res => res.json())
-        .then(data => setReviews(data))
-    }, [])
+        .then(data => setMyReview(data))
+    }, [user?.email])
 
     return (
         <div>
             <div>
-                <h2>All Review</h2>
+                <h2>My Review</h2>
             </div>
             <div>
                 <Table striped bordered hover>
@@ -24,14 +27,15 @@ const ReviewPage = () => {
                             <th>Photo</th>
                             <th>Name</th>
                             <th>Review</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            reviews.map(review =><ReviewRow
+                            myReview.map(review =><MyReviewRow
                                 key={review._id}
                                 review= {review}
-                            ></ReviewRow>)
+                            ></MyReviewRow>)
                         }
                     </tbody>
                 </Table>
@@ -40,4 +44,4 @@ const ReviewPage = () => {
     );
 };
 
-export default ReviewPage;
+export default MyReviews;
