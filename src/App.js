@@ -5,7 +5,7 @@ import { routes } from './Routes/Routes/Routes';
 
 function App() {
   return (
-    <div>
+    <div className='bg-color'>
       <RouterProvider router={routes}></RouterProvider>
       <Toaster></Toaster>
     </div>

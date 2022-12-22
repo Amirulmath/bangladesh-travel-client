@@ -11,11 +11,11 @@ const PlaceList = () => {
         .then(data => setServices(data))
     }, [])
     return (
-        <div className='m-4'>
-            <div className='m-4 text-center text-danger'>
+        <div>
+            <div className='mt-5 text-center'>
                 <h2>List of different Tourist Places</h2>
             </div>
-            <div className='home-card m-4'>
+            <div className='home-card mt-5'>
                 {
                     services.map(service =><PlaceListCard
                         key={service._id}

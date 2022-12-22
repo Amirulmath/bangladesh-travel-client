@@ -36,14 +36,12 @@ const Header = () => {
                     {
                         user?.uid ?
                             <>
-                             <span>{user?.displayName}</span>
-                              <Button variant="light">My Review</Button>
-                              <Button variant="light">Add Service</Button>
+                             <span className='me-4'>{user?.displayName}</span>
                               <Button variant="light" onClick={handleLogOut}>Log out</Button>
                             </>
                              :
                               <>
-                             <Link to='/login'>Login</Link>
+                             <Link className='text-decoration-none' to='/login'>Login</Link>
                              </>
                         }
                     </Nav.Link>

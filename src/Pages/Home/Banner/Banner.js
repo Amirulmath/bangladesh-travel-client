@@ -13,10 +13,10 @@ const Banner = () => {
                 src={Banner1}
                 alt="First slide"
                 />
-                <Carousel.Caption>
-                <h3 className='text-primary'>Beauty of Bangladesh Sea Beach</h3>
+                {/* <Carousel.Caption>
+                <h3 className='text-white'>Beauty of Bangladesh Sea Beach</h3>
                 <p>Let's go around and take a bath in the water of the fountain in the lap of the mountain.</p>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
             </Carousel.Item>
             <Carousel.Item>
                 <img
@@ -25,10 +25,10 @@ const Banner = () => {
                 alt="Second slide"
                 />
 
-                <Carousel.Caption>
-                <h3 className='text-primary'>Waterfall Beauty of Bangladesh</h3>
-                <p className='text-primary'>Let's go around and take a bath in the water of the fountain in the lap of the mountain.</p>
-                </Carousel.Caption>
+                {/* <Carousel.Caption>
+                <h3 className='text-white'>Waterfall Beauty of Bangladesh</h3>
+                <p className='text-white'>Let's go around and take a bath in the water of the fountain in the lap of the mountain.</p>
+                </Carousel.Caption> */}
             </Carousel.Item>
             <Carousel.Item>
                 <img
@@ -37,12 +37,12 @@ const Banner = () => {
                 alt="Third slide"
                 />
 
-                <Carousel.Caption>
-                <h3 className='text-primary'>Tea garden and hill's Beauty of Bangladesh</h3>
-                <p className='text-primary'>
+                {/* <Carousel.Caption>
+                <h3 className='text-white'>Tea garden and hill's Beauty of Bangladesh</h3>
+                <p className='text-white'>
                 Let's go around and take a bath in the water of the fountain in the lap of the mountain.
                 </p>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
             </Carousel.Item>
         </Carousel>
     );

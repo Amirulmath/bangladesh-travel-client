@@ -12,7 +12,7 @@ const ServiceCard = ({service}) => {
                 <Card.Title className=' text-center'>{title}</Card.Title>
                 <Card.Img className="mb-2" variant="top" src={image_url} />
                 <Card.Text>
-                    <p><b>Course Detail: </b>{details.length > 100 ? details.slice(0,100) + '...' : details}</p>
+                    <p><b>Tourist Place Detail: </b>{details.length > 100 ? details.slice(0,100) + '...' : details}</p>
                     <p><b>Travel Date: </b>{date}</p>
                     <p><b>Every Person Cost: </b>Tk.{fee}</p>
                 </Card.Text>

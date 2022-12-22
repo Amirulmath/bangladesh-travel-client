@@ -6,18 +6,18 @@ import { useLoaderData } from 'react-router-dom';
 import './ServiceDetail.css'
 
 const ServiceDetail = () => {
-    const {_id, title, details, fee, date, image_url, place1, img1, place2, img2, place3, img3, place4, img4} = useLoaderData();
+    const { title, details, fee, date, image_url, place1, img1, place2, img2, place3, img3, place4, img4} = useLoaderData();
     return (
         <div>
             <div>
-                <Card className="m-4">
+                <Card className="mt-5">
                     <Card.Body>
                         <Card.Title className='text-center'>
                             <h1>{title}</h1>
                         </Card.Title>
                         <Card.Img className="mb-2" variant="top" src={image_url} />
                         <Card.Text>
-                            <p><b>Course Detail: </b>{details}</p>
+                            <p><b>Tourist Place Detail: </b>{details}</p>
                             <p><b>Travel Date: </b>{date}</p>
                             <p><b>Every Person Cost: </b>Tk.{fee}</p>
                         </Card.Text>
@@ -26,19 +26,16 @@ const ServiceDetail = () => {
                         <Link>
                             <Button variant="primary">Review</Button>
                         </Link>
-                        <Link>
-                            <Button variant="primary">Add service</Button>
-                        </Link>
                         <Link to='/services'>
                             <Button variant="primary">Back To Service</Button>
                         </Link>
                     </Card.Footer>
                 </Card>
             </div>
-            <div className='m-2 text-center text-danger'>
+            <div className='mt-5 text-center'>
                 <h2>Different Tourist Places There</h2>
             </div>
-            <div className='place-card m-4'>
+            <div className='place-card mt-5 mb-5'>
                 <div>
                     <Card className='text-center'>
                         <Card.Img variant="top" src={img1} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import Button from 'react-bootstrap/Button';
 import './Home.css';
@@ -8,24 +8,23 @@ import Transport from '../Transport/Transport';
 import Hotel from './Hotel/Hotel';
 
 const Home = () => {
-    const services = useLoaderData();
     return (
-        <div className='m-4'>
+        <div className='mt-5'>
             <div>
                 <Banner></Banner>
             </div>
             <div>
                 <PlaceList></PlaceList>
             </div>
-            <div className='m-4 text-center'>
+            <div className='mt-5 text-center'>
                 <Link to='/services'>
                     <Button variant="success">See All</Button>
                 </Link>
             </div>
-            <div className='m-4'>
+            <div className='mt-5'>
                 <Transport></Transport>
             </div>
-            <div className='m-4'>
+            <div className='mt-5 mb-5'>
                 <Hotel></Hotel>
             </div>
         </div>

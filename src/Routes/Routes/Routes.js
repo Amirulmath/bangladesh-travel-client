@@ -3,6 +3,7 @@ import Main from "../../layout/Main";
 import BlogPage from "../../Pages/BlogPage/BlogPage";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
+import NotFound from "../../Pages/NotFound/NotFound";
 import Review from "../../Pages/Review/Review";
 import ReviewEdit from "../../Pages/ReviewPage/ReviewEdit";
 import ReviewPage from "../../Pages/ReviewPage/ReviewPage";
@@ -53,6 +54,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/reviewedit/:id', 
                 element: <ReviewEdit></ReviewEdit>
+            },  
+            {
+                path: '/*', 
+                element: <NotFound></NotFound>
             }      
         ]
     }
